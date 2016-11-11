@@ -1,0 +1,11 @@
+I:je
+am:suis
+me:moi
+idiot:idiot
+nice:gentil
+student:étudiant
+professor:professeur
+president:président
+python:python
+a:un
+

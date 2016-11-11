@@ -1,0 +1,37 @@
+Les exprssions régulières en Python
+
+Module re (import re)
+
+motif : expression régulière
+chaine : string
+
+re.search(motif, chaine) -> cherche n'importe où dans la chaîne le motif
+re.match(motif, chaine) -> cherche au début dans la chaîne le motif
+
+On écrit nos motifs avec r(raw) devant pour que Python interprète bien notre chaîne de caractères.
+
+Expressions régulières :
+
+. : n'importe quoi sauf \n.
+[a-e] : caractère entre a et e.
+[^a-e] : tous les caractères qui ne sont pas entre a et e.
+^ : caractère début de ligne.
+$ : caractère fin de ligne.
+\d : chiffre.
+\D : pas un chiffre.
+| : ou (alternative). hello | bonjour
+* : 0 à plusieurs fois.
++ : au mois une fois.
+exp{m, n} : m à n fois ab{3,4} on répète seulement le b 3 à 4 fois.
+exp{m,} : au moins m fois.
+exp{,n} : au plus n fois.
+(exp) : désigne un groupe que l'on peut réfèrencer après. (a+)b\1 on veut autant de a avant qu'après le b.
+\s : espace
+\w : alphanumérique
+\W : pas alphanumérique
+
+search et match renvoient un objet (instance de la classe match).
+On accède a ce que contient l'objet avec objet.group(0) pour avoir tout ce qui est matché.
+objet.group(1) renvoie la première sous chaîne.
+
+La recherche de motif est gloutonne.

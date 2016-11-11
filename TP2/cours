@@ -1,0 +1,45 @@
+String
+
+On ne peut pas changer un string c'est immutable. On ne peut pas faire s="abc"; s[2]="c"
+split : string.split("separateur") -> renvoie une liste
+join : concataine string.join(["s1", "s2", ..]) -> renvoie un string
+for i in "string" : Itère sur tout le string
+
+Liste
+
+Une liste est mutable, elle n'est pas typée.
+l.reverse() : renverse l -> ()
+l2 = l[:] : copie une liste
+3 in l : dis si 3 est dans l -> bool
+for i in l : Itère toute la liste
+for (i, c) enumerate(l) : enumerate produit le couple (indice, élément)
+l = [i for i in range(0,n)] : génère une liste de 0 à n-1
+l = [2*i for i in range(0, n) if i%3==0]
+
+Fichier
+
+f = fopen("fichier") : Par défaut ouvre en mode lecture
+f.read()  Lit tout le fichier et le renvoie sous forme de string
+f.readlines() : Renvoie la liste des lignes du fichier
+f.close()
+
+f = fopen("fichier", "w") : Ouvre le fichier en écriture
+f.write("texte") : Ecrit dans f
+f.close()
+
+Tout est codé en UTF-8
+
+#!/usr/bin/env/python3
+Méthodes définies et importables
+def
+.
+.
+.
+
+Méthodes exécutées seulement quand le fichier est exécuté en mode exécutable
+if __name__ = "__main__" :
+.
+.
+.
+
+sys.argv[1] : accède à l'argument 1 lors de l'appel du fichier

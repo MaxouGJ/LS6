@@ -1,0 +1,23 @@
+Les expressions régulières (le retour) :
+
+import re
+
+exp = re.compile(r"\d+")
+
+m = exp.match("345")
+m = exp.search("345")
+m = exp.findall("12a34b56") <- pareil que re.findAll(r"\d+","12a34b56") -> Cherche toutes les occurences du  pattern, renvoie une liste
+m = exp.finditer("12a34b56") -> Comme findAll mais renvoie un iterator
+m = exp.sub("new", "12a34b56") -> remplace par new le pattern dans la chaine 12a34b56
+
+exp = re.compile(r"a(.*)a") glouton
+exp1 = re.compile(r"a(.*?)a") plus petit
+
+m = exp.match("abcadeaef") -> bcade
+m = exp2.match("abcadeaef") -> bc
+
+exp = re.compile("chaine", OPTION)
+
+OPTIONS :
+re.DOTALL -> permet de matcher avec le . \n
+re.MULTILINE -> permet que $ soit le caractère fin de ligne et non plus fin de chaine

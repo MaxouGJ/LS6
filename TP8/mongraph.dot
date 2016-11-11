@@ -1,0 +1,7 @@
+digraph mongraph { 
+D -> C []
+A -> D []
+E -> F []
+B -> C [color=red, label=Z]
+A -> B []
+}

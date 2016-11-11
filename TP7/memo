@@ -1,0 +1,63 @@
+Les objets 
+
+Classes 
+	- méthodes
+	- atributs
+
+class CoorGeo :
+	#méthode exécutée lors de la création de l'instance
+	def __init__ (self, deg, min, sec):
+		self.deg = deg
+		self.min = min
+		self.sec = sec
+
+	obj = CoordGeo(48,51,10) #création de l'objet (appel à init)
+	
+	def deplacer(self, d1, d2, d3):
+		self.deg += d1
+		self.min += d2
+		self.sec += d3
+	
+	obj.deplacer(10,01,10) #appel à déplacer
+
+	del(obj) #détruit l'objet
+	#Override del
+	def __del__(self, ...)
+
+class A(CoordGeo) : #A hérite de CoordGeo
+class A(B,C) : #A hérite de A et B (héritage multiple)
+En cas de surchage de méthode il prend en priorité la méthode de l'objet puis celle de la classe étendue la plus à gauche
+
+Les méthodes "magiques"
+
+__repr__ définit une représentation de l'obj
+obj #appelle repr
+
+__str__ comme repr mais renvoie une chaîne de caractère plus parlante
+print(obj) #appelle str
+
+__add__(self, b)définit l'addition entre deux objets
+a + b #appelle add
+
+__iadd__(self, b)définit l'addition entre deux objets
+a += b #appelle iadd
+
+__lt__(self, b) a < b
+__le__(self, b) a <= b
+__eq__(self, b) a == b
+__ne__(self, b) a != b
+__ge__(self, b) a >= b
+__gt__(self, b) a > b
+
+__bool__(self) if(a)
+
+__len__(self) longeur de l'objet
+
+__getitem__ objet[i]
+__setitem__ objet[i] = x
+
+Itération sur un objet 
+
+__iter__(self) retourne un itérateur
+__next__(self) retourne l'objet courant et avance à l'objet suivant
+
